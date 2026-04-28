@@ -5,7 +5,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import JsonLd from "@/components/seo/JsonLd";
-import { SITE } from "@/lib/constants";
+import DemoBanner from "@/components/DemoBanner";
+import { SITE, SITE_INDEXED } from "@/lib/constants";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -57,8 +58,12 @@ export const metadata: Metadata = {
     canonical: SITE.url,
   },
   robots: {
-    index: true,
-    follow: true,
+    index: SITE_INDEXED,
+    follow: SITE_INDEXED,
+    googleBot: {
+      index: SITE_INDEXED,
+      follow: SITE_INDEXED,
+    },
   },
 };
 
@@ -75,6 +80,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <DemoBanner />
       </body>
     </html>
   );

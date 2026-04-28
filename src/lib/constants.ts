@@ -274,3 +274,9 @@ export const PRICES_PILATES = [
   { service: "1 clase/semana", price: "42 €/mes" },
   { service: "2 clases/semana", price: "80 €/mes" },
 ];
+
+// URL de la web original del cliente (usada en el banner de demo)
+export const ORIGINAL_URL = "http://www.fisioterapiapodologiacanal.es/";
+
+// Cambiar a true para habilitar la indexación en Google
+export const SITE_INDEXED = false;
